@@ -9,7 +9,20 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="<%= controller_name %> <%= action_name %>">
+
+  <div class="btn-group" >
+  <% if(user_signed_in? ) %>
+<%= link_to 'Edit profile', edit_user_registration_path,:class => "btn btn-secondary" %>
+<%= link_to 'sign out', destroy_user_session_path,method: :delete,:class => "btn btn-secondary" %>
+<% end %>
+<% if(user_signed_in? == false  ) %>
+<%= link_to 'Sign in', user_session_path,:class => "btn btn-secondary" %>
+<%= link_to 'Sign up', new_user_registration_path,:class => "btn btn-secondary" %>
+</div>
+<% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
