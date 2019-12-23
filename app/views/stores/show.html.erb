@@ -1,0 +1,7 @@
+<p><%= @store.name%> || <%= @store.user.name%></p>
+
+<% if(user_signed_in? ) %>
+<%= link_to 'Edit' , edit_store_path(@store) %>  ||
+<%= link_to 'delete' , store_path(@store),method: :delete%> ||
+<% end %>
+

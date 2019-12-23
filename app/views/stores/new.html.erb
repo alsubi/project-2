@@ -1,0 +1,13 @@
+<h1> new</h1>
+
+<%= form_for @store ,url: {action: 'create'} do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :location %>
+    <%= f.text_field :location ,placeholder: ('street-city')%> <br>
+    <%= f.label :image %>
+    <%= f.text_field :image %> <br>
+    <%= f.submit %>
+
+
+<% end %>

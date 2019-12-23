@@ -1,0 +1,12 @@
+<h1>edit store</h1>
+<%= form_for @store ,url: {action: 'update'} do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+    <%= f.label :location %>
+    <%= f.text_field :location ,placeholder: ('street-city')%> <br>
+    <%= f.label :image %>
+    <%= f.text_field :image %> <br>
+    <%= f.submit %>
+
+
+<% end %>

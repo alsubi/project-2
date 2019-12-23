@@ -1,0 +1,13 @@
+<h1>index store</h1>
+<%= link_to 'NEW' , new_store_path %> ###
+<br>
+<br>
+<br>
+<% @stores.each do |store|%>
+
+<%= link_to store_path(store.id) do %>
+  <img src=<%= store.image  %> title=<%=store.name%> width=100>
+<% end %>
+
+
+<% end %>
