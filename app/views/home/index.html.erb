@@ -1,24 +1,19 @@
-<h1> home index </h1>
+<h1 class="stores"> stores </h1>
 <br>
 <br>
 <br>
 
-<div class="card-deck " style="width:90%;">
-<% counter = 0%>
-<% @stores.each do |store|%>
-<% counter = counter+1%>
-<div class="card ">
-<%= link_to store_path(store.id) do %>
-    <img class="card-img-top" src=<%= store.image  %> alt="Card image cap">
-   <% end %> 
-   <div class="card-body">
-      <h5 class="card-title"><%= store.name%></h5>
-    </div>
-  </div>
-  <%if( counter == 4)%>
-  <br>
-  <% counter = 0%>
-  <% end %>
+<div class=" card-columns col-md  ">
+    <% @stores.each do |store|%>
+    
+        <div class="card  ">
+            <%= link_to store_path(store.id) do %>
+            <img class="card-img-top " src=<%= store.image  %> alt="Card image cap">
+            <% end %>
+            <div class="card-body">
+                <h5 class="card-title text-center" ><%= store.name%></h5>
+            </div>
+        </div>
 
-<% end %>
+    <% end %>
 </div>

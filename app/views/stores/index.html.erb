@@ -3,11 +3,17 @@
 <br>
 <br>
 <br>
-<% @stores.each do |store|%>
+<div class="card-columns col-md ">
+    <% @stores.each do |store|%>
+    
+        <div class="card  ">
+            <%= link_to store_path(store.id) do %>
+            <img class="card-img-top " src=<%= store.image  %> alt="Card image cap">
+            <% end %>
+            <div class="card-body">
+                <h5 class="card-title text-center" ><%= store.name%></h5>
+            </div>
+        </div>
 
-<%= link_to store_path(store.id) do %>
-  <img src=<%= store.image  %> title=<%=store.name%> width=100>
-<% end %>
-
-
-<% end %>
+    <% end %>
+</div>

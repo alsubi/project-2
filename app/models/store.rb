@@ -1,5 +1,5 @@
 class Store < ApplicationRecord
-  belongs_to :user
+  belongs_to :user 
   validates :name, uniqueness: true,presence: true
   # validates :image
   # validates_format_of :image,
