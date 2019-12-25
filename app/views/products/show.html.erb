@@ -21,17 +21,36 @@ By :<%= @store.user.name%> <hr> <%= @store.name%>
 <% end %>
 <% end %>
 <hr>
+<!--
 
-<div class="container ">
 <div class="card col-sm-12 col-lg-10">
   <div class="card-header">
-    <h1><%= @product.name%></h1>
-  </div>
-  <img class="card-img-top " style="width:100%; "  src="<%= @product.image%>" alt="image ">
-  <div class="card-body">
-    <h5 class="card-title">Price: <%= @product.price%> SAR</h5>
-    <p class="card-text">In Stock :<%= @product.quantity%></p>
     
+  </div>
+  <div class="card-body">
+      
+  </div>
+</div>
+</div>
+-->
+<div class="container ">
+<div class="card mb-6 col-ms-12 col-lg-11" >
+  <div class="row no-gutters">
+    <div class="col-5">
+
+  <img class="card-img-top my-5"   src="<%= @product.image%>" alt="image ">
+    </div>
+    <div class="col-md-5 d-flex align-items-center">
+      <div class="card-body">
+        <h1 class="card-title"><%= @product.name%></h1>
+        <hr>
+        <h5 class="card-title">Price: <%= @product.price%> SAR</h5>
+        <hr>
+    <p class="card-text">In Stock :<%= @product.quantity%></p>
+  
+<!--        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+-->      </div>
+    </div>
   </div>
 </div>
 </div>
