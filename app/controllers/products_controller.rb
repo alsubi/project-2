@@ -32,9 +32,10 @@ class ProductsController < ApplicationController
     end
 
     def destroy
+        @store= Store.find(params[:store_id])
         @product= Product.find(params[:id])
         @product.destroy
-        redirect_to stores_path        
+        redirect_to store_path(@store)       
     end
 
     private

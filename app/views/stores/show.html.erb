@@ -1,9 +1,11 @@
+<div class=" my_name_store">
 
-<div class="container">
   <div class="row">
   <div class="list-group" id="list-tab" role="tablist">
-    <div class="col-sm list-group-item-dark bl-5 h2">
-By :<%= @store.user.name%> / <%= @store.name%>
+    <div class="col-sm list-group-item-dark bl-5 h2 rounded-lg">
+    
+By :<%= @store.user.name%> <hr> <%= @store.name%>
+
     </div>
 </div>
   </div>
@@ -11,20 +13,21 @@ By :<%= @store.user.name%> / <%= @store.name%>
 
 <% if(user_signed_in? ) %>
 <% if(current_user.id == @store.user.id)%>
-<%= link_to 'Edit store info' , edit_store_path(@store) %>  ||
-<%= link_to 'Delete this store' , store_path(@store),method: :delete%> <br>
-<%= link_to 'Add New Prodect' , new_store_product_path(@store) %>  
+<%= link_to 'Edit store info' , edit_store_path(@store),class: "btn btn-info" %>  ||
+<%= link_to 'Delete this store' , store_path(@store),method: :delete, class: "btn btn-danger"%> <br><br>
+<%= link_to 'Add New Prodect' , new_store_product_path(@store) ,class: "btn btn-success"%>  
 
 <% end %>
 <% end %>
-
+<hr>
 
 <div class="container " > 
-<div class="row">
+<div class="row d-flex align-content-center">
     <% @products.each do |product|%>
-        <div class=" col-sm-12 col-lg-4 mb-4 ">
+        
             <%= link_to store_product_path(@store ,product) do %>
-            <img class="card-img-top " src=<%= product.image  %> alt="image ">
+            <div class=" col-sm-12 col-lg-4 mb-4 ">
+            <img class="card-img  "  style="width:90%; height:60%"  src=<%= product.image  %> alt="image ">
             <% end %>
 
             <div class="card-body my_card_color">

@@ -9,3 +9,8 @@ body{
     border:1px 1px 1px 1px  black solid;
     border-radius: 50px;
 }
+.my_name_store{
+    display: flex;
+    justify-content: center;
+    color: brown;
+}
