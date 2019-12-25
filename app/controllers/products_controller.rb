@@ -21,13 +21,14 @@ class ProductsController < ApplicationController
     end
 
     def edit
-        @product= Products.find(params[:id])
+        @store= Store.find(params[:store_id])
+        @product= Product.find(params[:id])
     end
 
     def update
         @store= Store.find(params[:store_id])
         @product= @store.products.update(product_params)
-        redirect_to store_prudect_path(@store, @product)
+        redirect_to store_product_path(@store, @product)
     end
 
     def destroy

@@ -8,6 +8,14 @@ By :<%= @store.user.name%> / <%= @store.name%>
 </div>
   </div>
 
+<% if(user_signed_in? ) %>
+<% if(current_user.id == @store.user.id)%>
+<%= link_to 'Edit product info' , edit_store_product_path(@store , @product) %>  ||
+<%= link_to 'Delete this store' , store_path(@store),method: :delete%> <br>
+<%= link_to 'Add New Prodect' , new_store_product_path(@store) %>  
+
+<% end %>
+<% end %>
 
 
 <div class="container">
