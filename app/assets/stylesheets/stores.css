@@ -3,10 +3,9 @@ body{
     font-family: 'Aclonica', sans-serif;
     text-align: center;
     
-    
 }
 .my_card_color{
     background-color: white;
     border:1px 1px 1px 1px  black solid;
-
+    border-radius: 50px;
 }

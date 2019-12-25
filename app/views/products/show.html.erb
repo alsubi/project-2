@@ -1,16 +1,25 @@
-<h1><%= @store.name %></h1>
+
+
+  <div class="row">
+  <div class="list-group" id="list-tab" role="tablist">
+    <div class="col-sm list-group-item-dark bl-5 h3">
+By :<%= @store.user.name%> / <%= @store.name%>
+    </div>
+</div>
+  </div>
+
 
 
 <div class="container">
-<div class="card col-sm-12 col-lg-11">
+<div class="card col-sm-12 col-lg-10">
   <div class="card-header">
     <h1><%= @product.name%></h1>
   </div>
-  <img class="card-img-top " style="width:100%" src="<%= @product.image%>" alt="Card image cap">
+  <img class="card-img-top " style="width:100%" src="<%= @product.image%>" alt="image ">
   <div class="card-body">
     <h5 class="card-title">Price: <%= @product.price%> SAR</h5>
     <p class="card-text">In Stock :<%= @product.quantity%></p>
-    <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+    
   </div>
 </div>
 </div>
