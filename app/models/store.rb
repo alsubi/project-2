@@ -5,5 +5,5 @@ class Store < ApplicationRecord
   # validates_format_of :image,
   # :with => %r{^balls/.+\.(gif|jpe?g|png)$}i,
   # :message => "must start with 'balls/' and have an image extension"
-
+  has_many :products ,dependent: :destroy
 end

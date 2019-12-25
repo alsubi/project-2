@@ -6,9 +6,11 @@ before_action :authenticate_user! ,only: [:create ,:edit,:new,:update,:destroy]
     end
     def new
         @store = Store.new
+        
     end
     def show  
         @store = Store.find(params[:id])
+        @products = @store.products
     end
     def edit
          @store = Store.find(params[:id])

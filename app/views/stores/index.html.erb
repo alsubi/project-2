@@ -1,19 +1,26 @@
-<h1>index store</h1>
-<%= link_to 'NEW' , new_store_path %> ###
+<h1>My Stores</h1>
+
 <br>
 <br>
 <br>
-<div class="card-columns col-md ">
+
+
+
+<div class="container " > 
+<div class="row">
     <% @stores.each do |store|%>
     
-        <div class="card  ">
+        <div class=" col-sm-12 col-lg-4 mb-4 ">
             <%= link_to store_path(store.id) do %>
             <img class="card-img-top " src=<%= store.image  %> alt="Card image cap">
             <% end %>
-            <div class="card-body">
-                <h5 class="card-title text-center" ><%= store.name%></h5>
+
+            <div class="card-body my_card_color">
+                <h5 class="card-title text-center " ><%= store.name%></h5>
             </div>
-        </div>
+       </div>
 
     <% end %>
-</div>
+     </div> <!-- END OF ROW-->
+</div> <!-- END OF Container -->
+

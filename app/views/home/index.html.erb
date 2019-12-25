@@ -2,8 +2,9 @@
 <br>
 <br>
 <br>
+<!--
+<div class=" card-columns col-md ">
 
-<div class=" card-columns col-md  ">
     <% @stores.each do |store|%>
     
         <div class="card  ">
@@ -17,3 +18,21 @@
 
     <% end %>
 </div>
+ -->
+ <div class="container " > 
+<div class="row">
+    <% @stores.each do |store|%>
+    
+        <div class=" col-sm-12 col-lg-4 ">
+            <%= link_to store_path(store.id) do %>
+            <img class="card-img-top " src=<%= store.image  %> alt="Card image cap">
+            <% end %>
+
+            <div class="card-body">
+                <h5 class="card-title text-center" ><%= store.name%></h5>
+            </div>
+       </div>
+
+    <% end %>
+     </div> <!-- END OF ROW-->
+</div> <!-- END OF Container -->
